@@ -1,0 +1,233 @@
+/*
+ |------------------------------------------------------------------------------
+ | Large
+ |------------------------------------------------------------------------------
+ */
+
+@media (min-width: 1200px) {
+  .service-item {
+    min-height: 190px;
+  }
+}
+
+/*
+ |------------------------------------------------------------------------------
+ | Medium
+ |------------------------------------------------------------------------------
+ */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  #home-carousel  .item {
+    height: 500px;
+  }
+
+  .carousel-caption h1 {
+    font-size:26px;
+    margin-bottom:0;
+    line-height:27px;
+    letter-spacing:2px;
+    font-weight:100;
+  }
+
+  .carousel-caption h2 {
+    font-size:51px;
+    font-weight:600;
+    margin-top:0px;
+    text-transform:lowercase;
+    letter-spacing:2px;
+    margin-bottom:20px;
+  }
+  
+  .service-item {
+    min-height: 240px;
+  }
+  
+  #pricing, #packages {
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+  
+  #affiliations {
+    padding-bottom: 100px;
+  }
+
+}
+
+/*
+ |------------------------------------------------------------------------------
+ | Small
+ |------------------------------------------------------------------------------
+ */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .navbar-default ul li a{
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+
+  #home-carousel .item {
+    height: 500px;
+  }
+
+  .carousel-caption h1 {
+    font-size:26px;
+    margin-bottom:0;
+    line-height:27px;
+    letter-spacing:2px;
+    font-weight:100;
+  }
+
+  .carousel-caption h2 {
+    font-size:51px;
+    font-weight:600;
+    margin-top:0px;
+    text-transform:lowercase;
+    letter-spacing:2px;
+    margin-bottom:20px;
+  }
+
+  #about .about-us {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 9%;
+  }
+  
+  .service-item {
+    min-height: 220px;
+  }
+  
+  .back-to-top {
+    display: none!important;
+  }
+
+  #pricing, #packages {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  #affiliations {
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  
+  #parallax {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #about .about-us .btn-send {
+    margin-top: 12px;
+  }
+
+}
+
+/*
+ |------------------------------------------------------------------------------
+ | Extra small (landscape)
+ |------------------------------------------------------------------------------
+ */
+
+@media (max-width: 767px) {
+
+  .logo {
+    margin-left: 15px;
+  }
+
+  .navbar-nav {
+    background-color: #f5f5f5;
+  }
+  
+  .navbar-default .navbar-collapse ul {
+    margin-top: 18px;
+  }
+
+  #home-carousel .item {
+    height: 300px;
+  }
+  
+  #home-carousel .btn-send {
+    display: none!important;
+  }
+  
+  .carousel-caption h1 {
+    font-size:16px;
+    margin-bottom:0;
+    line-height:27px;
+    letter-spacing:2px;
+    font-weight:100;
+  }
+
+  .carousel-caption h2 {
+    font-size:31px;
+    font-weight:600;
+    margin-top:0px;
+    text-transform:lowercase;
+    letter-spacing:2px;
+    margin-bottom:20px;
+  }
+
+  .back-to-top {
+    display: none!important;
+  }
+
+  .footer-social-icons {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  #contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contact-info {
+    margin-bottom: 50px;
+  }
+
+  #about .our-office {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  #parallax {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #about .about-us {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  
+  #pricing, #packages {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  #affiliations {
+    padding-bottom: 100px;
+    text-align: center;
+  }
+
+  .service-item {
+    margin-top: 50px;
+  }
+
+}
+
+/* XS Portrait */
+@media (max-width: 479px) {
+
+  .back-to-top {
+    display: none!important;
+  }
+
+}
