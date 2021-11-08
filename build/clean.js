@@ -10,8 +10,8 @@ module.exports = {
     css: [
         'dist/css/app.css',
         'dist/css/app.css.map',
-        'dist/css/app.css.min',
-        'dist/css/app.css.min.map'
+        'dist/css/app.min.css',
+        'dist/css/app.min.css.map'
     ],
     
     html: [
@@ -20,7 +20,6 @@ module.exports = {
     
     js: [
         'dist/js/app.js',
-        'dist/js/app.js.min',
     ]
     
 }

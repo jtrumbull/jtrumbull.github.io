@@ -10,6 +10,7 @@ module.exports = function(grunt) {
     // Configuration
     
     var options = {
+        browserify: require('./build/browserify'),
         clean: require('./build/clean'),
         cssmin: require('./build/cssmin'),
         pug: require('./build/pug'),
@@ -21,6 +22,7 @@ module.exports = function(grunt) {
     
     // Load build modules
     
+    grunt.task.loadNpmTasks('grunt-browserify');
     grunt.task.loadNpmTasks('grunt-contrib-clean');
     grunt.task.loadNpmTasks('grunt-contrib-cssmin');
     grunt.task.loadNpmTasks('grunt-contrib-pug');
@@ -38,7 +40,7 @@ module.exports = function(grunt) {
     ]);
     
     grunt.task.registerTask('js', 'Build JavaScript files', [
-        'clean:js' 
+        'clean:js', 'browserify:app'
     ]);
     
     grunt.task.registerTask('build', 'Build CSS, HTML, and JavaScript files', [

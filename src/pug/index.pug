@@ -1,0 +1,29 @@
+//- ---------------------------------------------------------------------------
+//- Pug: Index
+//- ---------------------------------------------------------------------------
+
+doctype html
+html(lang='en')
+
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='dist/css/app.min.css')
+        title Joseph Trumbull
+        
+    body
+        
+        header#header
+            include header
+        
+        section#content
+            include hero
+            include about
+            include skills
+            include contact
+            include resume
+        
+        footer#footer
+            include footer
+        
+        script(src='dist/js/app.js')
