@@ -5,3 +5,8 @@
 
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "icons";
+
+.section {
+    min-height: 100vh;
+}

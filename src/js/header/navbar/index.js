@@ -33,7 +33,7 @@ var Navbar = View.extend({
         });
         
         this.nav = new NavbarNav({
-            element: document.getElementById('header-navbar-nav')
+            element: document.getElementById('header-navbar-collapse')
         });
         
         this.toggler = new NavbarToggler({

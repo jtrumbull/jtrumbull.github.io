@@ -1,34 +1,25 @@
 /*
 |------------------------------------------------------------------------------
-| App\Header\Navbar: Nav item
+| Section
 |------------------------------------------------------------------------------
 |
-|   Nav item constructor
+|   Section constructor
 |
 */
 
-const View = require('../../../view');
+const View = require('../view');
 
-var NavbarNavItem = View.extend({
+var Section = View.extend({
+    
     
     /*
     |--------------------------------------------------------------------------
-    | Activate
+    | Initialize
     |--------------------------------------------------------------------------
     */
     
-    activate: function() {
-        this.element.classList.add('active');
-    },
-    
-    /*
-    |--------------------------------------------------------------------------
-    | Deactivate
-    |--------------------------------------------------------------------------
-    */
-    
-    deactivate: function() {
-        this.element.classList.remove('active');
+    initialize: function() {
+        
     },
     
     /*
@@ -43,4 +34,4 @@ var NavbarNavItem = View.extend({
     
 });
 
-module.exports = NavbarNavItem;
+module.exports = Section;

@@ -2,25 +2,7 @@
 //- Pug: Header
 //- ---------------------------------------------------------------------------
 
-nav.navbar.navbar-expand-sm.navbar-dark.bg-dark#header-navbar
+header#header
     
-    div.container
-    
-        a.navbar-brand(href='#') Joseph Trumbull
-        
-        button.navbar-toggler(
-            type='button',
-            data-bs-toggle='collapse',
-            data-bs-target='#header-navbar-collapse',
-            aria-controls='header-navbar-collapse',
-            aria-expanded='false',
-            aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-
-        div.collapse.navbar-collapse#header-navbar-collapse
-            div.navbar-nav
-                a.nav-link.active(aria-active='page', href='#') About
-                a.nav-link(href='#') Skills
-                a.nav-link(href='#') Resume
-                a.nav-link(href='#') Contact
+    include navbar
         
