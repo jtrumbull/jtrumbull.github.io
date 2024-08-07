@@ -1,37 +1,143 @@
+#!/usr/bin/env node
+
 import path from 'path';
 import gulp from 'gulp';
 import sass from 'gulp-sass';
-import autoprefixer from 'gulp-autoprefixer';
+import autoprefixer from 'autoprefixer';
 import browserify from 'browserify';
+import { deleteAsync } from 'del';
+import _buildFavicons from './build/favicons.js';
 
-const root = path.resolve(__dirname, '..');
+const root = path.resolve('./');
 const srcroot = path.join(root, 'src');
 const wwwroot = path.join(root, 'wwwroot');
 
-let cleanFavicons = async function () {}
+/**
+ * Clean favicons
+ */
 
-let cleanFonts = async function () {}
+let cleanFavicons = async () => deleteAsync([
+    path.join(wwwroot, 'icons'),
+    path.join(wwwroot, 'browserconfig.xml'),
+    path.join(wwwroot, 'manifest.webmanifest'),
+    path.join(wwwroot, 'yandex-browser-manifest.json'),
+    path.join(srcroot, 'pug/favicons.pug')
+]);
 
-let cleanImages = async function () {}
+/**
+ * Clean fonts
+ */
 
-let cleanPages = async function () {}
+let cleanFonts = async () => deleteAsync([path.join(wwwroot, 'fonts')]);
 
-let cleanScripts = async function () {}
+/**
+ * Clean images
+ */
 
-let cleanStyles = async function () {}
+let cleanImages = async () => deleteAsync([path.join(wwwroot, 'images')]);
 
+/**
+ * Clean pages
+ */
 
+let cleanPages = async () => deleteAsync([path.join(wwwroot, '*.html')]);
 
-let buildFavicons = async function () {}
+/**
+ * Clean scripts
+ */
 
-let buildFonts = async function () {}
+let cleanScripts = async () => deleteAsync([path.join(wwwroot, 'scripts')]);
 
-let buildImages = async function () {}
+/**
+ * Clean styles
+ */
 
-let buildPages = async function () {}
+let cleanStyles = async () => deleteAsync([path.join(wwwroot, 'styles')]);
 
-let buildScripts = async function () {}
+/**
+ * Clean all
+ */
+
+let cleanAll = gulp.parallel(cleanFavicons, cleanFonts, cleanImages, cleanPages, cleanScripts, cleanStyles);
+
+/**
+ * Build favicons
+ */
+
+let buildFavicons = _buildFavicons;
+
+/**
+ * Build fonts
+ */
+
+let buildFonts = async () => gulp.src("node_modules/bootstrap-icons/font/fonts/*").pipe(gulp.dest("wwwroot/fonts"));
+
+/**
+ * Build images
+ */
+
+let buildImages = async () => gulp.src("src/img/*").pipe(gulp.dest("wwwroot/images"));
+
+/**
+ * Build pages
+ */
+
+let buildPages = async function () {
+    return gulp.src("src/pug/*.pug")
+        .pipe(gulp.dest("wwwroot"))
+}
+
+/**
+ * Build scripts
+ */
+
+let buildScripts = async function () {
+  //console.log(argv);
+}
+
+/**
+ * Build styles
+ */
 
 let buildStyles = async function () {}
 
+/**
+ * Build all
+ */
+
 let buildAll = gulp.parallel(buildFavicons, buildFonts, buildImages, buildPages, buildScripts, buildStyles);
+
+let watchFavicons = async function () {}
+
+let watchFonts = async function () {}
+
+let watchImages = async function () {}
+
+let watchPages = async function () {}
+
+let watchScripts = async function () {}
+
+let watchStyles = async function () {}
+
+let watchAll = gulp.parallel(watchFavicons, watchFonts, watchImages, watchPages, watchScripts, watchStyles);
+
+// Define tasks
+
+gulp.task('clean:favicons', cleanFavicons);
+gulp.task('clean:fonts', cleanFonts);
+gulp.task('clean:images', cleanImages);
+gulp.task('clean:pages', cleanPages);
+gulp.task('clean:scripts', cleanScripts);
+gulp.task('clean:styles', cleanStyles);
+gulp.task('build:favicons', buildFavicons);
+gulp.task('build:fonts', buildFonts);
+gulp.task('build:images', buildImages);
+gulp.task('build:pages', buildPages);
+gulp.task('build:scripts', buildScripts);
+gulp.task('build:styles', buildStyles);
+gulp.task('watch:favicons', watchFavicons);
+gulp.task('watch:fonts', watchFonts);
+gulp.task('watch:images', watchImages);
+gulp.task('watch:pages', watchPages);
+gulp.task('watch:scripts', watchScripts);
+gulp.task('watch:styles', watchStyles);
