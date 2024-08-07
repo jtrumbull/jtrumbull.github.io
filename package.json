@@ -41,6 +41,7 @@
     "gulp-watch": "^5.0.1",
     "http-server": "^14.1.1",
     "minify": "^11.4.0",
+    "vinyl-source-stream": "^2.0.0",
     "yargs": "^17.7.2"
   },
   "dependencies": {
