@@ -7,5 +7,5 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# Compiled files
+# Static site output
 wwwroot/
