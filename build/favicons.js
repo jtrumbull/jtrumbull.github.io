@@ -1,3 +1,14 @@
+/**
+ * @fileoverview Generate favicons for the static site
+ * @module build/favicons
+ * @requires favicons
+ * @requires path
+ * @requires fs/promises
+ * @requires fancy-log
+ * @requires chalk
+ * @requires yargs
+ */
+
 import favicons from 'favicons';
 import path from 'path';
 import fs from 'fs/promises';

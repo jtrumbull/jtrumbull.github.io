@@ -2,11 +2,11 @@
 
 import path from 'path';
 import gulp from 'gulp';
-import sass from 'gulp-sass';
-import autoprefixer from 'autoprefixer';
-import browserify from 'browserify';
 import { deleteAsync } from 'del';
 import _buildFavicons from './build/favicons.js';
+import _buildPages from './build/pages.js';
+import _buildStyles from './build/styles.js';
+import _buildScripts from './build/scripts.js';
 
 const root = path.resolve('./');
 const srcroot = path.join(root, 'src');
@@ -82,24 +82,19 @@ let buildImages = async () => gulp.src("src/img/*").pipe(gulp.dest("wwwroot/imag
  * Build pages
  */
 
-let buildPages = async function () {
-    return gulp.src("src/pug/*.pug")
-        .pipe(gulp.dest("wwwroot"))
-}
+let buildPages = _buildPages;
 
 /**
  * Build scripts
  */
 
-let buildScripts = async function () {
-  //console.log(argv);
-}
+let buildScripts = _buildScripts;
 
 /**
  * Build styles
  */
 
-let buildStyles = async function () {}
+let buildStyles = _buildStyles;
 
 /**
  * Build all
