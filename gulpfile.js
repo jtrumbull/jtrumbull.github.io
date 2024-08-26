@@ -7,6 +7,7 @@ import _buildFavicons from './build/favicons.js';
 import _buildPages from './build/pages.js';
 import _buildStyles from './build/styles.js';
 import _buildScripts from './build/scripts.js';
+import watch from 'gulp-watch';
 
 const root = path.resolve('./');
 const srcroot = path.join(root, 'src');
@@ -23,42 +24,11 @@ let cleanFavicons = async () => deleteAsync([
     path.join(wwwroot, 'yandex-browser-manifest.json'),
     path.join(srcroot, 'pug/favicons.pug')
 ]);
-
-/**
- * Clean fonts
- */
-
 let cleanFonts = async () => deleteAsync([path.join(wwwroot, 'fonts')]);
-
-/**
- * Clean images
- */
-
 let cleanImages = async () => deleteAsync([path.join(wwwroot, 'images')]);
-
-/**
- * Clean pages
- */
-
 let cleanPages = async () => deleteAsync([path.join(wwwroot, '*.html')]);
-
-/**
- * Clean scripts
- */
-
 let cleanScripts = async () => deleteAsync([path.join(wwwroot, 'scripts')]);
-
-/**
- * Clean styles
- */
-
 let cleanStyles = async () => deleteAsync([path.join(wwwroot, 'styles')]);
-
-/**
- * Clean all
- */
-
-let cleanAll = gulp.parallel(cleanFavicons, cleanFonts, cleanImages, cleanPages, cleanScripts, cleanStyles);
 
 /**
  * Build favicons
@@ -100,21 +70,17 @@ let buildStyles = _buildStyles;
  * Build all
  */
 
-let buildAll = gulp.parallel(buildFavicons, buildFonts, buildImages, buildPages, buildScripts, buildStyles);
+let watchFavicons = watch(path.join(root, 'src/img/icon.png'), buildFavicons);
 
-let watchFavicons = async function () {}
+let watchFonts = watch(path.join(root, 'node_modules/bootstrap-icons/font/fonts/*'), buildFonts);
 
-let watchFonts = async function () {}
+let watchImages = watch(path.join(root, 'src/img/*'), buildImages);
 
-let watchImages = async function () {}
+let watchPages = watch(path.join(root, 'src/pug/**/*.pug'), buildPages);
 
-let watchPages = async function () {}
+let watchScripts = watch(path.join(root, 'src/js/**/*.js'), buildScripts);
 
-let watchScripts = async function () {}
-
-let watchStyles = async function () {}
-
-let watchAll = gulp.parallel(watchFavicons, watchFonts, watchImages, watchPages, watchScripts, watchStyles);
+let watchStyles = watch(path.join(root, 'src/scss/**/*.scss'), buildStyles);
 
 // Define tasks
 
@@ -136,3 +102,12 @@ gulp.task('watch:images', watchImages);
 gulp.task('watch:pages', watchPages);
 gulp.task('watch:scripts', watchScripts);
 gulp.task('watch:styles', watchStyles);
+
+let cleanAll = gulp.parallel(cleanFavicons, cleanFonts, cleanImages, cleanPages, cleanScripts, cleanStyles);
+gulp.task('clean:all', cleanAll);
+
+let buildAll = gulp.parallel(buildFavicons, buildFonts, buildImages, buildPages, buildScripts, buildStyles);
+gulp.task('build:all', buildAll);
+
+let watchAll = gulp.parallel('watch:favicons', 'watch:fonts', 'watch:images', 'watch:pages', 'watch:scripts', 'watch:styles');
+gulp.task('watch:all', watchAll);
