@@ -5,19 +5,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "http-server ./wwwroot -p 8080",
-    "build": "gulp build",
-    "build:favicons": "gulp build:favicons",
-    "build:pages": "gulp build:pages",
-    "build:scripts": "gulp build:scripts",
-    "build:styles": "gulp build:styles",
+    "serve": "http-server ./www -p 8000",
+    "build": "gulp build:all",
     "clean": "gulp clean",
-    "clean:favicons": "gulp clean:favicons",
-    "clean:pages": "gulp clean:pages",
-    "clean:scripts": "gulp clean:scripts",
-    "clean:styles": "gulp clean:styles",
-    "watch": "gulp watch"
+    "watch": "gulp watch:all"
   },
   "repository": {
     "type": "git",
@@ -30,33 +21,17 @@
   },
   "homepage": "https://github.com/jtrumbull/jtrumbull.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
     "browserify": "^17.0.0",
-    "chalk": "^5.3.0",
-    "del": "^7.1.0",
+    "chokidar": "^3.6.0",
     "fancy-log": "^2.0.0",
     "favicons": "^7.2.0",
     "gulp": "^5.0.0",
-    "gulp-autoprefixer": "^9.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-pug": "^5.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-watch": "^5.0.1",
-    "http-server": "^14.1.1",
-    "minify": "^11.4.0",
-    "sass": "^1.77.8",
-    "vinyl-source-stream": "^2.0.0",
-    "yargs": "^17.7.2"
+    "lodash": "^4.17.21",
+    "pug": "^3.0.3",
+    "rimraf": "^6.0.1",
+    "sass": "^1.77.8"
   },
   "dependencies": {
-    "@popperjs/core": "^2.10.2",
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
-    "gulp-uglify": "^3.0.2",
-    "jquery": "^3.7.1",
-    "lodash": "^4.17.21",
-    "vinyl-buffer": "^1.0.1"
+    "bulma": "^1.0.2"
   }
 }
