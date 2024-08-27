@@ -1,6 +1,6 @@
 
 <div style="text-align: center;">
-  <img src="src/img/icon.png" width="200">
+  <img src="src/images/icon.png" width="200">
   <h3>http://jtrumbull.github.io</h3>
 </div>
 
