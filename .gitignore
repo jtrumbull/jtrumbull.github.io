@@ -8,4 +8,4 @@ node_modules/
 .env
 
 # Static site output
-wwwroot/
+www/
