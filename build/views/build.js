@@ -10,10 +10,10 @@ export default function buildViews() {
     readDirectory(sourcePath, { withFileTypes: true, recursive: true })
       .then((dirents) => dirents.filter((dirent) => dirent.name.endsWith('.pug')))
       .then((dirents) => dirents.filter((dirent) => dirent.name !== 'layout.pug'))
-      .then((dirents) => dirents.filter((dirent) => !dirent.path.endsWith('includes')))
+      .then((dirents) => dirents.filter((dirent) => !dirent.parentPath.endsWith('includes')))
       .then((dirents) => {
 
-        const views = dirents.map((file) => new View(file.name, file.path));
+        const views = dirents.map((file) => new View(file.name, file.parentPath));
         const promises = views.map(view => view.render());
         
         Promise.all(promises).then(resolve).catch(reject);

@@ -9,7 +9,25 @@ block styles
     | html, body { height: 100vh; }
 
 block content
-  div.is-flex.is-justify-content-center.is-align-items-center(style="height: 85vh")
-    div
-      p.title Joseph Trumbull
-      p.subtitle Software Engineer & Architect
+  div.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center.mt-6
+    figure.image.is-128x128
+      img(src="/images/profile.jpg" width="128").is-rounded
+    p.title.is-4.mt-3 Joseph Trumbull
+    p.subtitle.is-5.mt-2 
+      span Software Developer
+    span.tag.is-success.mt-2 
+      span.icon-text
+            span.icon
+              i.fas.fa-check-circle
+            span Looking for work
+    div.mt-4
+      a.button.is-link.mr-3(href="/about.html") 
+        span.icon-text
+          span Learn more
+          span.icon
+            i.fas.fa-arrow-right
+      a.button.is-secondary(href="/about.html")
+        span.icon-text
+          span.icon
+            i.fas.fa-download
+          span Download Resume

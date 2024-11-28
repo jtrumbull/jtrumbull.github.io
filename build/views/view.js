@@ -36,6 +36,7 @@ export class View {
 
   get data() {
     if (!this._data) {
+      console.log(this.dataPath)
       if (fs.existsSync(this.dataPath)) {
         this._data = JSON.parse(fs.readFileSync(this.dataPath, 'utf8') || '{}');
       }

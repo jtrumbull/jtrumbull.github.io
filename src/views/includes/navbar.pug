@@ -2,25 +2,23 @@
 //- Pug: Navbar
 //- ---------------------------------------------------------------------------
 
-nav.navbar.fixed-top.navbar-expand-sm.navbar-dark.bg-dark#header-navbar
+nav.navbar(role="navigation")
     
-    div.container
+    div.navbar-brand
+        a(href='/').navbar-item Joseph Trumbull
     
-        a.navbar-brand(href='#') Joseph Trumbull
-        
-        button.navbar-toggler(
-            type='button',
-            data-bs-toggle='collapse',
-            data-bs-target='#header-navbar-collapse',
-            aria-controls='header-navbar-collapse',
-            aria-expanded='false',
-            aria-label='Toggle navigation')
-            span.navbar-toggler-icon
+        a.navbar-burger(
+            role='button',
+            data-target='header-navbar-menu')
+            span(aria-hidden="true")
+            span(aria-hidden="true")
+            span(aria-hidden="true")
+            span(aria-hidden="true")
 
-        div.collapse.navbar-collapse.justify-content-end#header-navbar-collapse
-            div.navbar-nav
-                a.nav-link(href='#', data-target='about') About
-                a.nav-link(href='#', data-target='skills') Skills
-                a.nav-link(href='#', data-target='resume') Resume
-                a.nav-link(href='#', data-target='contact') Contact
-        
+    div.navbar-menu#header-navbar-menu
+        div.navbar-start
+            a.nav-link(href='#', data-target='about') About
+            a.nav-link(href='#', data-target='skills') Skills
+            a.nav-link(href='#', data-target='resume') Resume
+            a.nav-link(href='#', data-target='contact') Contact
+    

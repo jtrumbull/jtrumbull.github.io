@@ -7,7 +7,7 @@ const includesPath = path.normalize("src/views/includes/favicons.pug");
 
 const options = {
   path: "/favicons",
-  appName: "jtrumbull",
+  appName: "Portfolio",
 };
 
 export default async function buildFavicons() {

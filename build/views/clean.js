@@ -17,7 +17,7 @@ export default function cleanViews() {
 
         const filepaths = files
           .filter((file) => file.isFile() && file.name.endsWith(".html"))
-          .map((file) => path.join(file.path, file.name));
+          .map((file) => path.join(file.parentPath, file.name));
 
         cleanFiles(filepaths).then(resolve).catch(reject);
       })
