@@ -1,0 +1,64 @@
+{
+  "activeNav": "resume",
+  "summary": "Accomplished Software Developer with over 10 years of experience in front-end and back-end development, demonstrating expertise in creating robust and scalable applications. Proficient in utilizing cutting-edge technologies such as Sass and TypeScript for front-end development and PHP, Node.js, and C# .NET for back-end development. Known for delivering high-quality solutions, collaborating effectively with cross-functional teams, and maintaining a strong focus on user experience and system performance. Adept at problem-solving, with a proven ability to adapt to new challenges and integrate innovative solutions. Experienced in managing projects with intermittent career gaps, showcasing resilience and commitment to continuous learning and professional growth.",
+  "history": [
+    {
+      "title": "Applications Developer",
+      "company": "Energy Management Systems",
+      "summary": "...",
+      "start": "04/01/2023",
+      "end": "08/01/2024"
+    },
+    {
+      "title": "Software Developer",
+      "company": "First State Mechanical",
+      "summary": "...",
+      "start": "09/01/2020",
+      "end": "11/01/2018"
+    },
+
+    {
+      "title": "(gap)",
+      "company": "Various",
+      "summary": "...",
+      "start": "11/01/2018",
+      "end": "09/01/2020"
+    },
+
+    {
+      "title": "Sr Systems Developer",
+      "company": "PPR Note Co, LLC",
+      "summary": "...",
+      "start": "06/01/2015",
+      "end": "11/01/2018"
+    },
+    {
+      "title": "Jr Software Developer",
+      "company": "PPR Note Co, LLC",
+      "summary": "...",
+      "start": "06/01/2013",
+      "end": "06/01/2015"
+    },
+    {
+      "title": "Data Entry Manager",
+      "company": "PPR Note Co, LLC",
+      "summary": "...",
+      "start": "01/01/2012",
+      "end": "06/01/2013"
+    },
+    {
+      "title": "Data Entry Speacialist",
+      "company": "PPR Note Co, LLC",
+      "summary": "...",
+      "start": "09/01/2011",
+      "end": "01/01/2012"
+    },
+    {
+      "title": "Diverse Youth Employment in Retail and Trades",
+      "company": "Various",
+      "summary": "During my early years, I accumulated a wealth of experience across a variety of roles in both retail and trades. These jobs honed my customer service skills, instilled a strong work ethic, and provided invaluable practical knowledge.",
+      "start": "06/01/2005",
+      "end": "09/01/2011"
+    }
+  ]
+}

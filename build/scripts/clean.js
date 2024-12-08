@@ -18,11 +18,11 @@ export default function cleanScripts() {
 
         const filepaths = files
           .filter((file) => file.isFile())
-          .map((file) => path.join(file.path, file.name));
+          .map((file) => path.join(file.parentPath, file.name));
 
         const dirpaths = files
           .filter((file) => file.isDirectory())
-          .map((file) => path.join(file.path, file.name));
+          .map((file) => path.join(file.parentPath, file.name));
 
         cleanFiles(filepaths)
           .then(() => {

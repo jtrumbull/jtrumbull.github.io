@@ -5,4 +5,27 @@
 extends layout
 
 block content
-  h1 Resume
+  div.container
+    div.section
+      h1.title Summary
+      p #{summary}
+    
+    div.section.pt-1
+      h1.title Work History
+
+      each item in history
+        - var start = new Date(item.start)
+        - var startMonth = start.getMonth() + 1
+        - var startYear = start.getFullYear()
+        - var end = new Date(item.end)
+        - var endMonth = end.getMonth() + 1
+        - var endYear = end.getFullYear()
+        div.work-history-item.mt-5
+          p.title.is-4= item.title
+          div.is-flex.is-align-items-baseline.is-flex-direction-row
+            p.subtitle.mr-3= item.company
+            p= `${startMonth.toString().padStart(2, '0')}/${startYear} - ${endMonth.toString().padStart(2, '0')}/${endYear}`
+          if item.summary
+            p
+              strong Summary: 
+              | #{item.summary}

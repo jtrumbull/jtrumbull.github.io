@@ -2,10 +2,20 @@
 //- Pug: Footer
 //- ---------------------------------------------------------------------------
 
-footer.footer.is-flex-align-items-flex-end.mt-auto#footer
-  .content.columns
-    div.column © Copyright 2024 Joseph Trumbull
-    div.column.has-text-right
-      a.button(href="https://github.com/jtrumbull")
-        span.icon
-          i.fab.fa-github
+footer.footer.is-flex-align-items-flex-end#footer(style ="height: 100px")
+  .container
+    .content.columns.mt-auto
+      div.column © Copyright 2024 Joseph Trumbull
+      div.column.has-text-right
+        a.button(href="https://github.com/jtrumbull", target="_blank").mr-1
+          span.icon
+            i.fab.fa-github
+        a.button(href="https://stackoverflow.com/users/3112730/jtrumbull", target="_blank").mr-1
+          span.icon
+            i.fab.fa-stack-overflow
+        a.button(href="https://x.com/joetrumbull", target="_blank").mr-1
+          span.icon
+            i.fab.fa-x-twitter
+        a.button(href="https://www.linkedin.com/in/jtrumbull/", target="_blank")
+          span.icon
+            i.fab.fa-linkedin

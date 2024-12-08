@@ -5,4 +5,50 @@
 extends layout
 
 block content
-  h1 Contact
+  .container.is-flex.is-flex-direction-row.is-justify-content-center.is-align-items-center(style="height: calc(100vh - 84px - 144px)")
+    div(style="width: 250px;")
+      h1.title.has-text-centered
+        span.icon-text
+          span.icon.mr-2
+            i.fas.fa-address-book
+          span Contact info
+      h2.subtitle.has-text-centered Get in touch and hire me
+    
+      ul.mt-6.pl-3
+        li.mb-2
+          span.icon-text
+            span.icon
+              i.fas.fa-location-dot
+            span King of Prussia, PA
+        li.mb-2
+          span.icon-text
+            span.icon
+              i.fas.fa-phone
+            span
+              a(href='tel:4845331058') (484) 533-1058
+              span.ml-2 (mobile)
+        li.mb-2
+          span.icon-text
+            span.icon
+              i.fas.fa-envelope
+            a(href='mailto:trumbull.j@gmail.com') trumbull.j@gmail.com
+        li.mb-2
+          span.icon-text
+            span.icon
+              i.fab.fa-github
+            a(href='mailto:trumbull.j@gmail.com') GitHub profile
+        li.mb-2
+          span.icon-text
+            span.icon
+              i.fab.fa-stack-overflow
+            a(href='mailto:trumbull.j@gmail.com') Stack Overflow profile
+        li.mb-2
+          span.icon-text
+            span.icon
+              i.fab.fa-x-twitter
+            a(href='mailto:trumbull.j@gmail.com') Twitter profile
+        li.mb-2
+          span.icon-text
+            span.icon
+              i.fab.fa-linkedin
+            a(href='mailto:trumbull.j@gmail.com') LinkedIn profile

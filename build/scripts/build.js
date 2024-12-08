@@ -5,14 +5,14 @@ import writeFile from "../helpers/write-file.js";
 export default function buildScripts() {
   return new Promise(async (resolve, reject) => {
 
-    const instance = browserify();
+    const bify = browserify();
     const inputPath = normalize("src/scripts/index.js");
     const outputPath = normalize("www/scripts/app.js");
 
-    instance.add(inputPath);
+    bify.add(inputPath);
     
     let content = '';
-    let bundle = instance.bundle();
+    let bundle = bify.bundle();
     
     bundle.on('data', chunk => {
       content += chunk;
