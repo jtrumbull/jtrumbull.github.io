@@ -1,6 +1,3 @@
-
-import fs from 'fs/promises';
-import pug from 'pug';
 import readDirectory from "../helpers/read-directory.js"
 import { sourcePath, View } from './view.js';
 
