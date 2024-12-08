@@ -1,9 +1,8 @@
 import chalk from "chalk";
 import { info } from "fancy-log";
-import { rimraf } from "rimraf";
+import { unlink } from 'fs/promises'
 
-export default function cleanFile(filepath) {
-  return rimraf(filepath).then(() =>
-    info(`Cleaned file '${chalk.yellow(filepath)}'`)
-  );
+export default async function cleanFile(filepath) {
+  await unlink(filepath)
+  info(`Cleaned file '${chalk.yellow(filepath)}'`)
 }

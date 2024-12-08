@@ -5,6 +5,7 @@ import readDirectory from "../helpers/read-directory.js"
 import writeFile from "../helpers/write-file.js"
 
 export const sourcePath = join('src/views');
+
 const outputPath = join('www');
 const sourceExt = '.pug';
 const outputExt = '.html';
@@ -36,7 +37,6 @@ export class View {
 
   get data() {
     if (!this._data) {
-      console.log(this.dataPath)
       if (fs.existsSync(this.dataPath)) {
         this._data = JSON.parse(fs.readFileSync(this.dataPath, 'utf8') || '{}');
       }
