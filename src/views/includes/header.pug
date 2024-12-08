@@ -7,7 +7,12 @@ header#header
   nav.navbar.is-spaced
     .navbar-brand
       a.navbar-item(href='/') Joseph Trumbull
-    .navbar-menu
+      a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='header-navbar-menu')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+    .navbar-menu#header-navbar-menu
      .navbar-end
         a.navbar-item(href='/about.html') About
         a.navbar-item(href='/resume.html') Resume
