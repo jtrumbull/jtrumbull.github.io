@@ -1,5 +1,5 @@
-import { copy } from 'cpx'
+import { src, dest } from 'gulp'
 
 export default function buildImages(cb) {
-  copy('src/images/**/*', 'www/images', cb)
+  return src('src/images/**/*').pipe(dest('www/images'))
 }
