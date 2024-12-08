@@ -1,13 +1,16 @@
 import { parallel, series } from "gulp";
 import buildFavicons from "./favicons/build.js";
+import buildImages from "./images/build.js";
 import buildScripts from "./scripts/build.js";
 import buildStyles from "./styles/build.js";
 import buildViews from "./views/build.js";
 import cleanFavicons from "./favicons/clean.js";
+import cleanImages from "./images/clean.js";
 import cleanScripts from "./scripts/clean.js";
 import cleanStyles from "./styles/clean.js";
 import cleanViews from "./views/clean.js";
 import watchFavicons from "./favicons/watch.js";
+import watchImages from "./images/watch.js";
 import watchScripts from "./scripts/watch.js";
 import watchStyles from "./styles/watch.js";
 import watchViews from "./views/watch.js";
@@ -20,6 +23,7 @@ export default [
         buildFavicons,
       ),
       parallel(
+        buildImages,
         buildScripts,
         buildStyles,
         buildViews
@@ -31,6 +35,11 @@ export default [
     name: "build:favicons",
     fn: series(cleanFavicons, buildFavicons),
     description: "Builds favicons from source image",
+  },
+  {
+    name: "build:images",
+    fn: series(cleanImages, buildImages),
+    description: "Copies source images to www root",
   },
   {
     name: "build:scripts",
@@ -52,6 +61,7 @@ export default [
     name: "clean:all",
     fn: parallel(
       cleanFavicons,
+      cleanImages,
       cleanScripts,
       cleanStyles,
       cleanViews
@@ -62,6 +72,11 @@ export default [
     name: "clean:favicons",
     fn: cleanFavicons,
     description: "Cleans the generated favicons",
+  },
+  {
+    name: "clean:images",
+    fn: cleanImages,
+    description: "Cleans the generated images",
   },
   {
     name: "clean:scripts",
@@ -83,6 +98,7 @@ export default [
     name: "watch:all",
     fn: parallel(
       watchFavicons,
+      watchImages,
       watchScripts,
       watchStyles,
       watchViews
@@ -93,6 +109,11 @@ export default [
     name: "watch:favicons",
     fn: watchFavicons,
     description: "Watches for changes in favicons and rebuilds",
+  },
+  {
+    name: "watch:images",
+    fn: watchImages,
+    description: "Watches for changes in images and rebuilds",
   },
   {
     name: "watch:scripts",
