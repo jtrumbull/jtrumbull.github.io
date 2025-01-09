@@ -5,51 +5,77 @@
     {
       "title": "Applications Developer",
       "company": "Energy Management Systems",
-      "summary": "...",
+      "summary": "Led the development and maintenance of enterprise-level energy management applications, focusing on real-time data processing and visualization. Spearheaded the migration from legacy systems to modern, scalable architecture using C# .NET Core and TypeScript.",
       "start": "04/01/2023",
-      "end": "08/01/2024"
-    },
-    {
-      "title": "Software Developer",
-      "company": "First State Mechanical",
-      "summary": "...",
-      "start": "09/01/2020",
-      "end": "11/01/2018"
+      "end": "08/01/2024",
+      "achievements": [
+        "Architected and implemented real-time data processing systems",
+        "Reduced system response time by 40% through optimization of database queries and implementation of caching strategies",
+        "Implemented automated testing and best practices",
+        "Designed and deployed RESTful APIs serving multiple client applications",
+        "Implemented CI/CD pipelines reducing deployment time"
+      ]
     },
 
     {
-      "title": "(gap)",
-      "company": "Various",
-      "summary": "...",
-      "start": "11/01/2018",
-      "end": "09/01/2020"
+      "title": "Various",
+      "company": "Various Roles",
+      "summary": "During the economic downturn, maintained employment through various temporary positions while actively developing personal software projects and expanding technical skills. Leveraged this period to explore new technologies and maintain professional development despite market challenges.",
+      "start": "11/01/2019",
+      "end": "04/01/2023"
     },
 
     {
       "title": "Sr Systems Developer",
       "company": "PPR Note Co, LLC",
-      "summary": "...",
+      "summary": "Led development efforts for financial note processing systems, managing both technical implementation and team coordination. Responsible for architectural decisions and implementation of best practices.",
       "start": "06/01/2015",
-      "end": "11/01/2018"
+      "end": "11/01/2019",
+      "achievements": [
+        "Designed and implemented a new customer portal reducing support tickets",
+        "Created automated reporting systems saving 20 hours of manual work weekly",
+        "Integrated multiple third-party APIs for real-time data collection and analysis",
+        "Modernized frontend architecture using TypeScript and Sass, improving development efficiency",
+        "Implemented CI/CD pipelines reducing deployment time"
+      ]
     },
     {
       "title": "Jr Software Developer",
       "company": "PPR Note Co, LLC",
-      "summary": "...",
+      "summary": "Contributed to the development and maintenance of financial processing systems, focusing on front-end development and database optimization.",
       "start": "06/01/2013",
-      "end": "06/01/2015"
+      "end": "06/01/2015",
+      "achievements": [
+        "Redesigned company's primary web application using modern JavaScript frameworks",
+        "Implemented responsive design patterns reducing mobile-related support tickets",
+        "Created reusable UI component library improving development efficiency",
+        "Developed interactive data visualization dashboards for financial metrics",
+        "Integrated front-end error tracking reducing time to identify client-side issues"
+      ]
     },
     {
       "title": "Data Entry Manager",
       "company": "PPR Note Co, LLC",
-      "summary": "...",
+      "summary": "Managed data entry operations and led process improvement initiatives. Supervised a team of data entry specialists while implementing quality control measures.",
       "start": "01/01/2012",
-      "end": "06/01/2013"
+      "end": "06/01/2013",
+      "achievements": [
+        "Led a team of 8 data entry specialists",
+        "Implemented quality control processes reducing error rates",
+        "Developed Excel automation tools improving productivity",
+        "Streamlined workflow processes reducing processing time"
+      ]
     },
     {
       "title": "Data Entry Speacialist",
       "company": "PPR Note Co, LLC",
-      "summary": "...",
+      "summary": "Performed accurate data entry of financial documents while maintaining high attention to detail and meeting strict deadlines.",
+      "achievements": [
+        "Consistently exceeded accuracy targets",
+        "Developed efficient data entry procedures",
+        "Trained new team members on systems and procedures",
+        "Contributed to process improvement initiatives"
+      ],
       "start": "09/01/2011",
       "end": "01/01/2012"
     },
